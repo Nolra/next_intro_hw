@@ -7,7 +7,7 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  assetPrefix: isProd ? 'https://nolra.github.io/next_deploy' : undefined,
+  assetPrefix: isProd ? 'https://nolra.github.io/next_intro_hw' : undefined,
 };
 
 export default nextConfig;

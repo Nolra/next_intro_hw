@@ -14,7 +14,7 @@ const nextConfig = process.env.NODE_ENV === 'development' ? {
     path: '',
     domains: ['via.placeholder.com'],
   },
-  assetPrefix: './',
+  assetPrefix: 'https://nolra.github.io/next_intro_hw',
 };
 
 

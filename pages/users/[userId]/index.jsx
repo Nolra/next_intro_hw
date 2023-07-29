@@ -1,5 +1,4 @@
 import User from "@/components/User";
-import Head from 'next/head';
 import { getUser, getUsers } from "../../api/users";
 
 export async function getStaticPaths() {
@@ -14,20 +13,18 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const user = await getUser(context.params.userId);
-  return { props: { user }, };
+  return { props: { 
+    user,
+    pageTitle: "User " + context.params.userId
+   }, };
 }
 
 
 
 export default function UserPage({ user }) {
   return (
-    <>
-      <Head>
-        <title>User page</title>
-      </Head>
-      <div className="container">
-        <User user={user} key={user.id} />
-      </div>    
-    </>
+    <div className="container">
+      <User user={user} key={user.id} />
+    </div>
   )
 }

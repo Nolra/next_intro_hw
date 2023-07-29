@@ -1,5 +1,4 @@
 import Post from "@/components/Post";
-import Head from 'next/head';
 import { getPostsForUser } from "../../api/posts";
 import { getUsers } from "../../api/users";
 
@@ -16,16 +15,16 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const posts = await getPostsForUser(context.params.userId);
   const users = await getUsers();
-  return { props: { posts, users }, };
+  return { props: { 
+    posts, 
+    users,
+    pageTitle: "Users " + context.params.userId + " posts"
+  }, };
 }
 
 export default function Posts({ posts, users }) {
   return (
     <>
-      <Head>
-        <title>Posts</title>
-      </Head>
-
       <div className="container">
         { posts.map(
           post => {

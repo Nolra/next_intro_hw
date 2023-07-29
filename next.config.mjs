@@ -11,7 +11,7 @@ const nextConfig = process.env.NODE_ENV === 'development' ? {
   basePath: '/next_intro_hw',
   images: {
     loader: 'akamai',
-    path: '/',
+    path: '/next_intro_hw/',
     domains: ['via.placeholder.com'],
   },
 };

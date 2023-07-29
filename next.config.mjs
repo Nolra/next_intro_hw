@@ -22,7 +22,7 @@ const nextConfig = process.env.NODE_ENV === 'development' ? {
       },
     ],
   },
-  assetPrefix: '/next_intro_hw',
+  assetPrefix: '/next_intro_hw/',
 };
 
 

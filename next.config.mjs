@@ -14,7 +14,7 @@ const nextConfig = process.env.NODE_ENV === 'development' ? {
     path: '',
     domains: ['via.placeholder.com'],
   },
-  assetPrefix: '/next_intro_hw/',
+  assetPrefix: '/next_intro_hw',
 };
 
 

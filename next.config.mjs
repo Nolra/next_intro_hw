@@ -8,7 +8,7 @@ const nextConfig = process.env.NODE_ENV === 'development' ? {
     domains: ['via.placeholder.com'],
   },
 } : {
-  basePath: '/next_intro_hw/',
+  basePath: '/next_intro_hw',
   images: {
     loader: 'akamai',
     path: '',

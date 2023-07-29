@@ -9,6 +9,7 @@ const nextConfig = process.env.NODE_ENV === 'development' ? {
   },
 } : {
   basePath: '/next_intro_hw',
+  assetPrefix: '/next_intro_hw/',
   images: {
     loader: 'akamai',
     path: '/next_intro_hw/',

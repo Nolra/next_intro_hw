@@ -13,6 +13,14 @@ const nextConfig = process.env.NODE_ENV === 'development' ? {
     loader: 'akamai',
     path: '',
     domains: ['via.placeholder.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+        port: '',
+        pathname: '',
+      },
+    ],
   },
   assetPrefix: '/next_intro_hw',
 };

@@ -11,16 +11,8 @@ const nextConfig = process.env.NODE_ENV === 'development' ? {
   basePath: '/next_intro_hw',
   images: {
     loader: 'akamai',
-    path: '',
+    path: '/',
     domains: ['via.placeholder.com'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'via.placeholder.com',
-        port: '',
-        pathname: '',
-      },
-    ],
   },
   assetPrefix: '/next_intro_hw/',
 };

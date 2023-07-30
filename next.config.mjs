@@ -2,7 +2,7 @@
  * @type {import('next').NextConfig}
  */
 
-const nextConfig = process.env.NODE_ENV === 'prodaction' ? {
+const nextConfig = process.env.NODE_ENV === 'production' ? {
   // basePath: '/next_intro_hw',
   assetPrefix: 'https://nolra.github.io/next_intro_hw',
   images: {

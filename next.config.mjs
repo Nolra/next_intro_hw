@@ -1,30 +1,46 @@
-// const nextConfig = process.env.NODE_ENV === 'production' ? {
-//   // basePath: '/next_intro_hw',
-//   assetPrefix: 'https://nolra.github.io/next_intro_hw',
-//   images: {
-//     loader: 'akamai',
-//     path: '',
-//     // domains: ['via.placeholder.com'],
-//   },
-// } : {
-//   reactStrictMode: true,
-//   images: {
-//     domains: ['via.placeholder.com'],
-//   },
-// };
+// /**
+//  * @type {import('next').NextConfig}
+//  */
 
-// export default nextConfig;
- 
-/**
- * @type {import('next').NextConfig}
- */
-const isProd = process.env.NODE_ENV === 'production'
-const nextConfig = {
+const repo = 'next_intro_hw'
+const assetPrefix = `/${repo}/`
+const basePath = `/${repo}`
+
+const nextConfig = process.env.NODE_ENV === 'production' ? {
+  assetPrefix: assetPrefix,
+  basePath: basePath,
   images: {
-    loader: 'akamai',
-    path: '',
+    domains: ['via.placeholder.com'],
   },
-  assetPrefix: isProd ? 'https://nolra.github.io/next_deploy' : undefined,
+} : {
+  basePath: basePath,
+  images: {
+    domains: ['via.placeholder.com'],
+  },
 };
 
 export default nextConfig;
+ 
+
+
+// const isGithubActions = process.env.GITHUB_ACTIONS || false
+
+// let assetPrefix = '';
+// let basePath = '/'
+
+// if (isGithubActions) {
+//   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+//   assetPrefix = `/${repo}/`
+//   basePath = `/${repo}`
+// }
+
+// const nextConfig = {
+//   assetPrefix: isGithubActions ? assetPrefix : undefined,
+//   basePath: isGithubActions ? basePath : '/',
+//   images: {
+//     loader: 'imgix',
+//     path: 'https://nolra.github.io/next_intro_hw',
+//   },
+// }
+
+// export default nextConfig;

@@ -9,7 +9,7 @@ const nextConfig = process.env.NODE_ENV === 'development' ? {
   },
 } : {
   // basePath: '/next_intro_hw',
-  // assetPrefix: 'https://nolra.github.io/next_intro_hw',
+  assetPrefix: 'https://nolra.github.io/next_intro_hw',
   images: {
     loader: 'akamai',
     path: '',

@@ -1,6 +1,6 @@
-// /**
-//  * @type {import('next').NextConfig}
-//  */
+/**
+ * @type {import('next').NextConfig}
+ */
 
 const repo = 'next_intro_hw'
 const assetPrefix = `/${repo}/`
@@ -11,6 +11,7 @@ const nextConfig = process.env.NODE_ENV === 'production' ? {
   basePath: basePath,
   images: {
     domains: ['via.placeholder.com'],
+    unoptimized: true,
   },
 } : {
   basePath: basePath,
